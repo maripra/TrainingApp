@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_diario"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/menu_diario"/>
+
+        <item
+            android:id="@+id/menu_historial"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/menu_historial"/>
+        <item
+            android:id="@+id/menu_entrenoOpcional"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/menu_entrenoOpcional"/>
+        <item
+            android:id="@+id/menu_entrenamientos"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/menu_entrenamientos"/>
+        <item
+            android:id="@+id/menu_idioma"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/menu_idioma"/>
+        <item
+            android:id="@+id/menu_salir"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/menu_salir"/>
+    </group>
+</menu>

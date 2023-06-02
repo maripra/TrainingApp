@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TrainingApp</string>
+    <string name="login_correo">Correo</string>
+    <string name="login_contrasena">Contraseña</string>
+    <string name="login_button">Iniciar Sesion</string>
+    <string name="login_registro">Registrarse</string>
+    <string name="espanol">ESPAÑOL</string>
+    <string name="ingles">INGLES</string>
+    <string name="navigation_drawer_open">drawer open</string>
+    <string name="navigation_drawer_close">drawer_close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_diario">Diario</string>
+    <string name="menu_historial">Historial</string>
+    <string name="menu_entrenoOpcional">Entrenamientos Opcionales</string>
+    <string name="menu_entrenamientos">Entrenamientos</string>
+    <string name="menu_idioma">Idioma</string>
+    <string name="menu_salir">Salir</string>
+</resources>

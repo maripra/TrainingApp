@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".RegistroActivity">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rellenar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Rellena el siguiente formulario"
+                android:textAlignment="textStart"
+                android:textSize="18dp"
+                android:textStyle="italic" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:ems="20"
+                android:hint="Nombre y apellido"
+                android:inputType="text"
+                android:textSize="24dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <RadioGroup
+                android:id="@+id/radioSexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="189dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:text="Mujer" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Hombre" />
+            </RadioGroup>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="100dp"
+                android:ems="20"
+                android:hint="Teléfono"
+                android:inputType="phone"
+                android:textSize="24dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="369dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:hint="@string/login_correo"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textColor="@color/azul_3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtContrasena"
+                    android:layout_width="369dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:hint="@string/login_contrasena"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/azul_3" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/btnRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:backgroundTint="@color/azul_3"
+                android:text="Registrarse"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
