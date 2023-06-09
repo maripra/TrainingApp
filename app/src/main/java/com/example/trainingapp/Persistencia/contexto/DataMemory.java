@@ -63,7 +63,7 @@ public class DataMemory {
 
 
     private void InitializeLineaUsuari0(){
-        LineasUsuario.add(new LineaUsuario("1", "1","Torso/Pierna", 45, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
+        LineasUsuario.add(new LineaUsuario("1", "1","Cirucito", 45, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
         LineasUsuario.add(new LineaUsuario("2", "1","Tabata", 30, Timestamp.now(), false, TipoEntrenamiento.OPTATIVO));
     }
     private void InitializeIdioma(){

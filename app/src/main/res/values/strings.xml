@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">TrainingApp</string>
     <string name="login_correo">Correo</string>
@@ -8,10 +9,6 @@
     <string name="ingles">INGLES</string>
     <string name="settings">Configuración</string>
     <string name="dashboard_nav_menu">Dashboard</string>
-    <string name="entrenamientos_nav_menu">Entrenamientos</string>
-    <string name="historial_nav_menu">Historial</string>
-    <string name="idioma_nav_menu">Idiomas</string>
-    <string name="exit_nav_menu">Salir</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -21,6 +18,11 @@
     <string name="prompt_signin_form">prompt_signin_form</string>
     <string name="today_training">Entrenamiento de Hoy:</string>
     <string name="entreno_opcional">Entreno Opcional</string>
+    <string name="entrenamientos">Entrenamientos</string>
+    <string name="historial">Historial</string>
+    <string name="idiomas">Idiomas</string>
+    <string name="salir">Salir</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
 
 
 </resources>

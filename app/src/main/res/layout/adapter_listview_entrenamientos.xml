@@ -12,46 +12,42 @@
         android:id="@+id/entrenamiento_item_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
+        android:layout_marginLeft="20dp"
         android:text="@string/number_adapter_entrenamiento"
         android:textAppearance="?attr/textAppearanceListItem" />
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+
 
         <TextView
             android:id="@+id/entrenamiento_Titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
-            android:text="Torso-Pierna"
+            android:text="Circuito"
             android:textAppearance="?attr/textAppearanceListItem" />
 
-        <TextView
-            android:id="@+id/entrenamiento_TipoEntrenamiento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
-            android:text="Obligatorio"
-            android:textAppearance="?attr/textAppearanceListItem" />
-    </LinearLayout>
+
     <TextView
-        android:id="@+id/entrenamiento_Fecha"
+        android:id="@+id/txtentreno_Fecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
+        android:layout_margin="10dp"
         android:text="05/06/23"
         android:textAppearance="?attr/textAppearanceListItem" />
 
     <CheckBox
-        android:id="@+id/entrenamiento_checkbox"
+        android:id="@+id/incompletadoCheckbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin">
+        android:layout_margin="10dp">
 
     </CheckBox>
-
+    <TextView
+        android:id="@+id/entrenamiento_TipoEntrenamiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="Obligatorio"
+        android:textAppearance="?attr/textAppearanceListItem" />
 
 </LinearLayout>
 

@@ -6,7 +6,7 @@
     tools:context=".Fragment.HistorialFragment">
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/listViewHistorial"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"/>

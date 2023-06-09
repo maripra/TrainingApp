@@ -78,6 +78,7 @@ public class IdiomaListViewAdapter extends BaseAdapter {
                         mainActivity.getBaseContext().getResources().updateConfiguration(config, mainActivity.getBaseContext().getResources().getDisplayMetrics());
                         mainActivity.recreate();
                         Log.d("CLICK: ", idioma.getDescription());
+                        Toast.makeText(mainActivity, idioma.getDescription(), Toast.LENGTH_SHORT).show();
                     }
                     else{
                         Toast.makeText(mainActivity, "El lenguaje seleccionado ya está en uso", Toast.LENGTH_SHORT).show();

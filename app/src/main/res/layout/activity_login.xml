@@ -69,7 +69,7 @@
                 android:backgroundTint="@color/azul_3"
                 android:layout_marginLeft="15dp"
                 android:hint="@string/login_button"
-                android:text="Iniciar Sesión"
+                android:text="@string/iniciar_sesion"
                 android:textAlignment="center"
                 android:textColor="@color/white" />
 

@@ -8,18 +8,18 @@
         <item
             android:id="@+id/menu_entrenamientos"
             android:icon="@drawable/baseline_sports_gymnastics_24"
-            android:title="Entrenamientos" />
+            android:title="@string/entrenamientos" />
         <item
             android:id="@+id/menu_historial"
             android:icon="@drawable/baseline_work_history_24"
-            android:title="Historial"/>
+            android:title="@string/historial"/>
         <item
             android:id="@+id/menu_idioma"
             android:icon="@drawable/baseline_language_24"
-            android:title="Idiomas"/>
+            android:title="@string/idiomas"/>
         <item
             android:id="@+id/menu_salir"
             android:icon="@drawable/baseline_exit_to_app_24"
-            android:title="Salir"/>
+            android:title="@string/salir"/>
     </group>
 </menu>

@@ -9,17 +9,18 @@
     <string name="ingles">ENGLISCH</string>
     <string name="settings">Einstellungen</string>
     <string name="dashboard_nav_menu">Dashboard</string>
-    <string name="entrenamientos_nav_menu">Trainings</string>
-    <string name="historial_nav_menu">Verlauf</string>
-    <string name="idioma_nav_menu">Sprachen</string>
-    <string name="exit_nav_menu">Beenden</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hallo leeres Fragment</string>
     <string name="navigation_drawer_open">Menü öffnen</string>
     <string name="navigation_drawer_close">Menü schließen</string>
     <string name="number_adapter_entrenamiento">1</string>
-    <string name="prompt_signin_form">Anmeldeformular auffordern</string>
-    <string name="today_training">Tages-Training</string>
+    <string name="prompt_signin_form">prompt_signin_form</string>
+    <string name="today_training">Heutiges Training:</string>
     <string name="entreno_opcional">Optionales Training</string>
+    <string name="entrenamientos">Trainings</string>
+    <string name="historial">Verlauf</string>
+    <string name="idiomas">Sprachen</string>
+    <string name="salir">Beenden</string>
+    <string name="iniciar_sesion">Anmelden</string>
 </resources>

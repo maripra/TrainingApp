@@ -16,7 +16,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="220dp">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -47,52 +48,29 @@
                     android:id="@+id/editTextTitulo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nombre Entrenamiento"
+                    android:hint="Ejercicios"
+                    android:textSize="20sp"
                     android:inputType="text" />
 
                 <TextView
                     android:id="@+id/editTextDate"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="26dp"
                     android:inputType="date"
+                    android:textSize="20sp"
                     tools:text="13/06/2023" />
             </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/btnPdf"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="SEMANA2 DIA 2"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <Button
-                android:id="@+id/btnVideo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="184dp"
-                android:text="@string/entreno_opcional"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ListView
-            android:id="@+id/listView"
+            android:id="@+id/listViewEjercicios"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"></ListView>
 
 
     </LinearLayout>
+
 
 </FrameLayout>

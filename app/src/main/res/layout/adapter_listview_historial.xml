@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView
+        android:id="@+id/entrenamiento_item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="@string/number_adapter_entrenamiento"
+        android:textAppearance="?attr/textAppearanceListItem" />
+
+
+    <TextView
+        android:id="@+id/entrenamiento_Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="Circuito"
+        android:textAppearance="?attr/textAppearanceListItem" />
+
+
+    <TextView
+        android:id="@+id/txtentreno_Fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="05/06/23"
+        android:textAppearance="?attr/textAppearanceListItem" />
+
+    <CheckBox
+        android:id="@+id/completadoCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+    </CheckBox>
+    <TextView
+        android:id="@+id/entrenamiento_TipoEntrenamiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="Obligatorio"
+        android:textAppearance="?attr/textAppearanceListItem" />
+
+</LinearLayout>
+

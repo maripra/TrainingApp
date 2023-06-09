@@ -6,8 +6,8 @@
     tools:context=".Fragment.EntrenamientoFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <ListView
+        android:id="@+id/listViewLineaUsuario"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"/>
