@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                 }else{
                     loginUser(emailUser,passwordUser);
                 }
-                startActivity(new Intent(LoginActivity.this,MainActivity.class));
+
             }
         });
         regis.setOnClickListener(new View.OnClickListener() {
@@ -64,12 +64,19 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginUser(String emailUser, String passwordUser) {
-            mAuth.signInWithEmailAndPassword(emailUser,passwordUser).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            mAuth.signInWithEmailAndPassword(emailUser,passwordUser).addOnCompleteListener(this,new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        finish();
-                        startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                        //finish();
+                        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                        //Creamos una intención para navegar al MainActivity pasandole el contexto actual de la aplicación
+                        Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
+
+                        //Añadimos el usuario al intent para poder acceder a el desde la otra actividad
+                        mainIntent.putExtra("userId", userId);
+                        startActivity(mainIntent);
+
                         Toast.makeText(LoginActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(LoginActivity.this, "Error", Toast.LENGTH_SHORT).show();

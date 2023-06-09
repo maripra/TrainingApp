@@ -3,17 +3,11 @@ package com.example.trainingapp.Modelo;
 
 public class ModelIdioma {
 
-    private int id;
+    private String id;
     private String countryCode;
     private String description;
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getCountryCode() {
         return countryCode;
@@ -31,10 +25,17 @@ public class ModelIdioma {
         this.description = description;
     }
 
-    public ModelIdioma(int id, String countryCode, String description){
+    public ModelIdioma(String id, String countryCode, String description){
         this.id= id;
         this.countryCode=countryCode;
         this.description=description;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

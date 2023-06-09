@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,19 +7,27 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".LoginActivity">
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="411dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/fondo"
+    android:scaleType="centerCrop">
 
-            <ImageView
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/login" />
+</ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="20dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            tools:layout_editor_absoluteX="-107dp"
+            tools:layout_editor_absoluteY="-16dp">
+
+
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -47,20 +55,22 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:hint="@string/login_contrasena"
-                    android:inputType="text"
-                    android:maxLines="1"
-                    android:textColor="@color/azul_3" />
+                    android:selectAllOnFocus="true"
+                    android:imeOptions="actionDone"
+                    android:imeActionLabel=""
+                    android:inputType="textPassword"/>
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <Button
                 android:id="@+id/btnLogin"
-                android:layout_width="369dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
                 android:backgroundTint="@color/azul_3"
+                android:layout_marginLeft="15dp"
                 android:hint="@string/login_button"
                 android:text="Iniciar Sesión"
+                android:textAlignment="center"
                 android:textColor="@color/white" />
 
             <TextView
@@ -71,10 +81,11 @@
                 android:hint="@string/login_registro"
                 android:textAlignment="center"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:text="registrarse" />
 
         </LinearLayout>
-    </ScrollView>
 
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

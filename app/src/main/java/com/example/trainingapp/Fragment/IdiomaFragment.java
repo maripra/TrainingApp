@@ -15,6 +15,7 @@ import com.example.trainingapp.Adapters.IdiomaListViewAdapter;
 import com.example.trainingapp.Modelo.ModelIdioma;
 import com.example.trainingapp.R;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -47,9 +48,13 @@ public class IdiomaFragment extends Fragment {
         _context = getActivity();
         _listView = (ListView) _view.findViewById(R.id.listView);
 
-        List<ModelIdioma> idiomas = Arrays.asList(
-                new ModelIdioma(1,"es",getString(R.string.espanol)),
-                new ModelIdioma(2, "en",getString(R.string.ingles)));
+        List<ModelIdioma> idiomas = new ArrayList<>();
+
+        idiomas.add(new ModelIdioma("1", "es", "Español/(España)"));
+        idiomas.add(new ModelIdioma("2", "en", "English"));
+        idiomas.add(new ModelIdioma("3", "de", "Deutsche"));
+        idiomas.add(new ModelIdioma("4", "fr", "Français"));
+
         _adapter = new IdiomaListViewAdapter(_context,idiomas);
         _listView.setAdapter(_adapter);
     }

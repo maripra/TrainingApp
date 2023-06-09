@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TrainingApp</string>
+    <string name="login_correo">Email</string>
+    <string name="login_contrasena">Mot de passe</string>
+    <string name="login_button">Se connecter</string>
+    <string name="login_registro">Se inscrire</string>
+    <string name="espanol">ESPAGNOL</string>
+    <string name="ingles">ANGLAIS</string>
+    <string name="settings">Paramètres</string>
+    <string name="dashboard_nav_menu">Tableau de bord</string>
+    <string name="entrenamientos_nav_menu">Entraînements</string>
+    <string name="historial_nav_menu">Historique</string>
+    <string name="idioma_nav_menu">Langues</string>
+    <string name="exit_nav_menu">Quitter</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Bonjour fragment vide</string>
+    <string name="navigation_drawer_open">Ouvrir le menu</string>
+    <string name="navigation_drawer_close">Fermer le menu</string>
+    <string name="number_adapter_entrenamiento">1</string>
+    <string name="prompt_signin_form">Demander le formulaire de connexion</string>
+    <string name="today_training">Entraînement du jour</string>
+    <string name="entreno_opcional">Entraînement facultatif</string>
+</resources>

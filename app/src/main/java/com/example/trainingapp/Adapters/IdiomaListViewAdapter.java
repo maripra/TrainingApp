@@ -8,10 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.example.trainingapp.AppConfig;
+//import com.example.trainingapp.Persistencia.usuarios.contexto.AppConfig;
+import com.example.trainingapp.Persistencia.contexto.AppConfig;
 import com.example.trainingapp.MainActivity;
 import com.example.trainingapp.Modelo.ModelIdioma;
 import com.example.trainingapp.R;
@@ -63,20 +65,23 @@ public class IdiomaListViewAdapter extends BaseAdapter {
 
                     ModelIdioma idioma = ((ModelIdioma) view.getTag());
                     //INICIA LA APP EN ESPAÑOL (AppConfig)
-                    AppConfig.LANG_CURRENT = idioma.getCountryCode();
+                    AppConfig.IDIOMA_ACTUAL = idioma.getCountryCode();
 
                     MainActivity mainActivity = (MainActivity) _context;
 
                     Configuration config = mainActivity.getBaseContext().getResources().getConfiguration();
-                    if(!"".equals(AppConfig.LANG_CURRENT) && !config.locale.getLanguage().equals(AppConfig.LANG_CURRENT)){
+                    if(!"".equals(AppConfig.IDIOMA_ACTUAL) && !config.locale.getLanguage().equals(AppConfig.IDIOMA_ACTUAL)){
                         mainActivity.recreate();
-                        Locale locale = new Locale(AppConfig.LANG_CURRENT);
+                        Locale locale = new Locale(AppConfig.IDIOMA_ACTUAL);
                         Locale.setDefault(locale);
                         config.locale=locale;
-                        mainActivity.getBaseContext().getResources().updateConfiguration(config,mainActivity.getBaseContext().getResources().getDisplayMetrics());
+                        mainActivity.getBaseContext().getResources().updateConfiguration(config, mainActivity.getBaseContext().getResources().getDisplayMetrics());
+                        mainActivity.recreate();
+                        Log.d("CLICK: ", idioma.getDescription());
                     }
-                    mainActivity.recreate();
-                    Log.d("Click: ", idioma.getDescription());
+                    else{
+                        Toast.makeText(mainActivity, "El lenguaje seleccionado ya está en uso", Toast.LENGTH_SHORT).show();
+                    }
 
             }
         });

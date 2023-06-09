@@ -2,29 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/menu_diario"
-            android:icon="@mipmap/ic_launcher"
-            android:title="@string/menu_diario"/>
-
-        <item
-            android:id="@+id/menu_historial"
-            android:icon="@mipmap/ic_launcher"
-            android:title="@string/menu_historial"/>
-        <item
-            android:id="@+id/menu_entrenoOpcional"
-            android:icon="@mipmap/ic_launcher"
-            android:title="@string/menu_entrenoOpcional"/>
+            android:id="@+id/menu_dashboard"
+            android:icon="@drawable/baseline_dashboard_24"
+            android:title="@string/dashboard_nav_menu"/>
         <item
             android:id="@+id/menu_entrenamientos"
-            android:icon="@mipmap/ic_launcher"
-            android:title="@string/menu_entrenamientos"/>
+            android:icon="@drawable/baseline_sports_gymnastics_24"
+            android:title="Entrenamientos" />
+        <item
+            android:id="@+id/menu_historial"
+            android:icon="@drawable/baseline_work_history_24"
+            android:title="Historial"/>
         <item
             android:id="@+id/menu_idioma"
-            android:icon="@mipmap/ic_launcher"
-            android:title="@string/menu_idioma"/>
+            android:icon="@drawable/baseline_language_24"
+            android:title="Idiomas"/>
         <item
             android:id="@+id/menu_salir"
-            android:icon="@mipmap/ic_launcher"
-            android:title="@string/menu_salir"/>
+            android:icon="@drawable/baseline_exit_to_app_24"
+            android:title="Salir"/>
     </group>
 </menu>

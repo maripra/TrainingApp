@@ -75,13 +75,13 @@ public class RegistroActivity extends AppCompatActivity {
                     Toast.makeText(RegistroActivity.this, "Introduce el nombre y el apellido", Toast.LENGTH_SHORT).show();
                     name.setError("El nombre y el apellido es requerido");
                     name.requestFocus();
-                }else if(TextUtils.isEmpty(phoneUser)){
+                }else if(validarNumeroTelefono(phoneUser)){
                     Toast.makeText(RegistroActivity.this, "Introduce el número de teléfono", Toast.LENGTH_SHORT).show();
                     phone.setError("el teléfono es requerido");
                     phone.requestFocus();
                 }else if(phone.length() != 9){
                     Toast.makeText(RegistroActivity.this, "Por favor introduce el nº de teléfono", Toast.LENGTH_SHORT).show();
-                    phone.setError("el nº de teléfono debería tener 9 dígitos");
+                    phone.setError("el nº de teléfono tiene que tener 9 dígitos");
                     phone.requestFocus();
                 }else if(TextUtils.isEmpty(emailUser)){
                     Toast.makeText(RegistroActivity.this, "Introduce el email", Toast.LENGTH_SHORT).show();
@@ -95,7 +95,7 @@ public class RegistroActivity extends AppCompatActivity {
                     Toast.makeText(RegistroActivity.this, "Por favor seleccione vuestro género", Toast.LENGTH_SHORT).show();
                     radioButtonGenero.setError("el género es requerido");
                     radioButtonGenero.requestFocus();
-                }else if(TextUtils.isEmpty(passwordUser)){
+                }else if(validarContrasena(passwordUser)){
                     Toast.makeText(RegistroActivity.this, "Por favor introduce la contraseña", Toast.LENGTH_SHORT).show();
                     password.setError("Contraseña es requerida");
                     password.requestFocus();
@@ -150,5 +150,20 @@ public class RegistroActivity extends AppCompatActivity {
             }
         });
     }
+    public boolean validarNumeroTelefono(String numero) {
+        //String patron = "^[0-9]{9}$";
+        String patron = "^\\d{9}$";
+
+        return !numero.isEmpty() && Pattern.matches(patron, numero)&& !numero.matches(".*[a-zA-Z]+.*");
+    };
+    public  boolean validarContrasena(String contrasena) {
+        // Expresión regular para validar una contraseña con letras y números
+        String patron = "^(?=.*[a-zA-Z])(?=.*\\d).+$";
+
+        return contrasena != null && !contrasena.isEmpty() && Pattern.matches(patron, contrasena);
+    }
+
+
+
 
 }
