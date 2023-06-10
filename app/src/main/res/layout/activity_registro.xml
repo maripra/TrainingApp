@@ -7,6 +7,10 @@
     android:gravity="center"
     tools:context=".RegistroActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Formulario de registro"
+                android:text="@string/formulario_de_registro"
                 android:textAlignment="center"
                 android:textSize="18dp"
                 tools:text="Formulario de registro">
@@ -36,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                android:hint="Nombre"
+                android:hint="@string/nombre"
                 android:inputType="text"
                     android:minHeight="48dp"/>
 
@@ -44,7 +48,7 @@
                     android:id="@+id/txtApellido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Apellido"
+                    android:hint="@string/apellido"
                     android:inputType="text"
                     android:minHeight="48dp"/>
             <RadioGroup
@@ -59,14 +63,14 @@
                     android:layout_width="189dp"
                     android:layout_height="wrap_content"
                     android:clickable="true"
-                    android:text="Mujer" />
+                    android:text="@string/mujer" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:text="Hombre" />
+                    android:text="@string/hombre" />
             </RadioGroup>
 
             <EditText
@@ -75,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:minHeight="48dp"
-                android:hint="Teléfono"
+                android:hint="@string/telefono"
                 android:inputType="phone" />
 
 
@@ -106,11 +110,11 @@
                 android:layout_margin="16dp"
                 android:enabled="true"
                 android:backgroundTint="@color/azul_3"
-                android:text="Registrarse"
+                android:text="@string/registrarse"
                 android:textColor="@color/white" />
 
         </LinearLayout>
-
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -75,8 +75,8 @@ public class EntrenamientoFragment extends Fragment {
 
         List<LineaUsuario> lineaUsuarios = new ArrayList<>();
         lineaUsuarios.add(new LineaUsuario("1", "1","Cirucito", 45, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
-        lineaUsuarios.add(new LineaUsuario("2", "1","Tabata", 20, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
-        lineaUsuarios.add(new LineaUsuario("3", "1","GAP", 50, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
+        lineaUsuarios.add(new LineaUsuario("2", "1","Tabata", 20, Timestamp.now(), true, TipoEntrenamiento.OPTATIVO));
+        lineaUsuarios.add(new LineaUsuario("3", "1","GAP", 50, Timestamp.now(), true, TipoEntrenamiento.OPTATIVO));
         lineaUsuarios.add(new LineaUsuario("4", "1","CORE", 30, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
         lineaUsuarios.add(new LineaUsuario("5", "1","Tonificación", 40, Timestamp.now(), false, TipoEntrenamiento.OBLIGATORIO));
         lineaUsuarios.add(new LineaUsuario("6", "1","Carrera", 60, Timestamp.now(), false, TipoEntrenamiento.OBLIGATORIO));

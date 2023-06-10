@@ -48,7 +48,7 @@
                     android:id="@+id/editTextTitulo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Ejercicios"
+                    android:hint="@string/ejercicios"
                     android:textSize="20sp"
                     android:inputType="text" />
 

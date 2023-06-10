@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 import com.example.trainingapp.Modelo.LineaUsuario;
 import com.example.trainingapp.R;
@@ -44,15 +45,27 @@ public class HistorialListviewAdapter extends BaseAdapter {
             LayoutInflater inflater = LayoutInflater.from(_context);
             view = inflater.inflate(R.layout.adapter_listview_historial, viewGroup, false);
         }
-        /*LineaUsuario lineaUsuario = _items.get(i);
-        view.setTag(lineaUsuario);*/
+        LineaUsuario lineaUsuario = _items.get(i);
+        view.setTag(lineaUsuario);
+
+        TextView itemlbl = view.findViewById(R.id.entrenamiento_item_number);
+        itemlbl.setText(lineaUsuario.getId());
+        TextView nombrelbl = view.findViewById(R.id.entrenamiento_Titulo);
+        nombrelbl.setText(lineaUsuario.getNombreEntrenamiento());
+        TextView duracionTotal = view.findViewById(R.id.duracionTotal);
+        duracionTotal.setText(Integer.toString(lineaUsuario.getDuracionTotalAproxMin()));
+        TextView fechalbl = view.findViewById(R.id.txtentreno_Fecha);
+        fechalbl.setText(lineaUsuario.getFechaInicio().toString());
+        TextView tipolbl = view.findViewById(R.id.entrenamiento_TipoEntrenamiento);
+        tipolbl.setText(lineaUsuario.getTipoEntrenamiento().name());
+
         CheckBox completadoCheckBox = view.findViewById(R.id.completadoCheckbox);
 
         // Obtener el objeto LineaUsuario correspondiente a esta posición
-        LineaUsuario lineaUsuario = _items.get(i);
+        LineaUsuario lineaUser = _items.get(i);
 
         // Establecer el estado de marcado del checkbox
-        completadoCheckBox.setChecked(!lineaUsuario.isCompletado());
+        completadoCheckBox.setChecked(!lineaUser.isCompletado());
 
 
 

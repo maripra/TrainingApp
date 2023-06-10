@@ -23,6 +23,14 @@
     <string name="idiomas">Idiomas</string>
     <string name="salir">Salir</string>
     <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="formulario_de_registro">Formulario de registro</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="mujer">Mujer</string>
+    <string name="hombre">Hombre</string>
+    <string name="telefono">Teléfono</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="ejercicios">Ejercicios</string>
 
 
 </resources>

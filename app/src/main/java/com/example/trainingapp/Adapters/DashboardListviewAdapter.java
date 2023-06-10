@@ -54,7 +54,12 @@ public class DashboardListviewAdapter extends BaseAdapter {
 
         TextView Nombrelbl = view.findViewById(R.id.lblNombre);
         Nombrelbl.setText(ejercicio.getTitulo());
-
+        TextView Serieslbl = view.findViewById(R.id.lblSeries);
+        Serieslbl.setText(Integer.toString(ejercicio.getSeries()));
+        TextView Duracionlbl = view.findViewById(R.id.lblDuracionSeg);
+        Duracionlbl.setText(Integer.toString(ejercicio.getDuracionSeg()));
+        TextView Repeticioneslbl = view.findViewById(R.id.lblRepeticiones);
+        Repeticioneslbl.setText(Integer.toString(ejercicio.getRepeticiones()));
 
         return view;
     }

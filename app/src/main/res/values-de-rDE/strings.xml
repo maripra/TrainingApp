@@ -23,4 +23,12 @@
     <string name="idiomas">Sprachen</string>
     <string name="salir">Beenden</string>
     <string name="iniciar_sesion">Anmelden</string>
+    <string name="formulario_de_registro">Registrierungsformular</string>
+    <string name="nombre">Name</string>
+    <string name="apellido">Nachname</string>
+    <string name="mujer">Frau</string>
+    <string name="hombre">Mann</string>
+    <string name="telefono">Telefon</string>
+    <string name="registrarse">Registrieren</string>
+    <string name="ejercicios">Übungen</string>
 </resources>

@@ -14,23 +14,31 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:text="@string/number_adapter_entrenamiento"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:textAppearance="?attr/textAppearanceListItem"/>
 
 
         <TextView
             android:id="@+id/entrenamiento_Titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
+            android:layout_margin="10dp"
             android:text="Circuito"
-            android:textAppearance="?attr/textAppearanceListItem" />
-
+            android:textAppearance="?attr/textAppearanceListItem"/>
+    <TextView
+        android:id="@+id/duracionTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="45"
+        android:textAppearance="?attr/textAppearanceListItem"/>
 
     <TextView
         android:id="@+id/txtentreno_Fecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="1dp"
+        android:layout_marginLeft="10dp"
         android:text="05/06/23"
         android:textAppearance="?attr/textAppearanceListItem" />
 
@@ -38,14 +46,14 @@
         android:id="@+id/incompletadoCheckbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:layout_margin="2dp">
 
     </CheckBox>
     <TextView
         android:id="@+id/entrenamiento_TipoEntrenamiento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="15dp"
         android:text="Obligatorio"
         android:textAppearance="?attr/textAppearanceListItem" />
 
