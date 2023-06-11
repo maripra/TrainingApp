@@ -1,11 +1,9 @@
 package com.example.trainingapp.Modelo;
 
 public class Usuario {
-
     //Propiedades
     private String id;
     private String Email;
-
     private String Contrasena;
     private String Nombre;
     private String Apellido;
@@ -13,8 +11,7 @@ public class Usuario {
     private String Genero;
 
     //Constructor
-
-    public Usuario (String id, String Email, String contrasena, String Nombre, String Apellido, String telefono, String Genero){
+    public Usuario (String id, String Email, String Contrasena, String Nombre, String Apellido, String telefono, String Genero){
         this.id = id;
         this.Email= Email;
         this.Contrasena = Contrasena;

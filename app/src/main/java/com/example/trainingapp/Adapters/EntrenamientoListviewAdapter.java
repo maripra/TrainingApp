@@ -12,7 +12,10 @@ import android.widget.TextView;
 import com.example.trainingapp.Modelo.LineaUsuario;
 import com.example.trainingapp.R;
 
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class EntrenamientoListviewAdapter extends BaseAdapter {
     private Context _context;
@@ -55,7 +58,11 @@ public class EntrenamientoListviewAdapter extends BaseAdapter {
         TextView duracionTotal = view.findViewById(R.id.lblDuracionTotal);
         duracionTotal.setText(Integer.toString(lineaUsuario.getDuracionTotalAproxMin()));
         TextView fechalbl = view.findViewById(R.id.txtentreno_Fecha);
-        fechalbl.setText(lineaUsuario.getFechaInicio().toString());
+        Locale locale = new Locale("es", "ES");
+        DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.DEFAULT, locale);
+        String date = dateFormat.format(lineaUsuario.getFechaInicio().toDate());
+        fechalbl.setText(date);
+
         TextView tipolbl = view.findViewById(R.id.entrenamiento_TipoEntrenamiento);
         tipolbl.setText(lineaUsuario.getTipoEntrenamiento().name());
 

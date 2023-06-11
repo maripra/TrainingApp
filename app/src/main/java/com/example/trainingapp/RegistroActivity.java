@@ -28,6 +28,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegistroActivity extends AppCompatActivity {
@@ -75,46 +76,56 @@ public class RegistroActivity extends AppCompatActivity {
                 String hashedPassword = hashearContrasena(passwordUser);
                 String textGenero;
 
-                if(validarLetras(nameUser)) {
+                if(!validarLetras(nameUser)) {
                     Toast.makeText(RegistroActivity.this, "Introduce el nombre ", Toast.LENGTH_SHORT).show();
                     name.setError("El nombre no puede tener números ni estar vacio");
                     name.requestFocus();
-                }else if(validarLetras(surnameUser)){
+                    return;
+                }else if(!validarLetras(surnameUser)){
                     Toast.makeText(RegistroActivity.this, "Introduce el apellido ", Toast.LENGTH_SHORT).show();
                     name.setError("El apellido no puede tener números ni estar vacio");
                     name.requestFocus();
+                    return;
                 } else if (phoneUser.isEmpty()) {
                     Toast.makeText(RegistroActivity.this, "Introduce el número de teléfono", Toast.LENGTH_SHORT).show();
                     phone.setError("El teléfono es requerido");
                     phone.requestFocus();
+                    return;
                 } else if (!validarNumeroTelefono(phoneUser)) {
                     Toast.makeText(RegistroActivity.this, "Por favor introduce un número de teléfono válido", Toast.LENGTH_SHORT).show();
                     phone.setError("El número de teléfono debe tener 9 dígitos y no contener letras");
                     phone.requestFocus();
+                    return;
                 } else if (phoneUser.length() != 9) {
                     Toast.makeText(RegistroActivity.this, "Por favor introduce un número de teléfono válido", Toast.LENGTH_SHORT).show();
                     phone.setError("El número de teléfono debe tener 9 dígitos");
                     phone.requestFocus();
+                    return;
                 } else if(TextUtils.isEmpty(emailUser)){
                     Toast.makeText(RegistroActivity.this, "Introduce el email", Toast.LENGTH_SHORT).show();
                     email.setError("el email es requerido");
                     email.requestFocus();
+                    return;
                 }else if(!Patterns.EMAIL_ADDRESS.matcher(emailUser).matches()){
                     Toast.makeText(RegistroActivity.this, "Por favor introduce el email", Toast.LENGTH_SHORT).show();
                     email.setError("se requiere un email válido");
                     email.requestFocus();
+                    return;
                 }else if(radioGroupGenero.getCheckedRadioButtonId()== -1) {
                     Toast.makeText(RegistroActivity.this, "Por favor seleccione vuestro género", Toast.LENGTH_SHORT).show();
                     radioButtonGenero.setError("el género es requerido");
                     radioButtonGenero.requestFocus();
-                }else if(validarContrasena(passwordUser)){
+                    return;
+                }else if(!validatePassword(passwordUser)){
                     Toast.makeText(RegistroActivity.this, "Por favor introduce la contraseña", Toast.LENGTH_SHORT).show();
                     password.setError("Contraseña puede tener números y letras");
                     password.requestFocus();
-                }else if(hashedPassword.length()<8){
+                    return;
+                }else if(passwordUser.length()<8){
                     Toast.makeText(RegistroActivity.this, "La contraseña debería tener al menos 8 dígitos", Toast.LENGTH_SHORT).show();
                     password.setError("Contraseña demasiado débil");
                     password.requestFocus();
+                    return;
                 }else{
                     textGenero=radioButtonGenero.getText().toString().trim();
                     registroUser(nameUser,surnameUser,phoneUser,emailUser,hashedPassword,textGenero);
@@ -169,11 +180,11 @@ public class RegistroActivity extends AppCompatActivity {
 
         return !numero.isEmpty() && Pattern.matches(patron, numero)&& !numero.matches(".*[a-zA-Z]+.*");
     };
-    public  boolean validarContrasena(String contrasena) {
-        // Expresión regular para validar una contraseña con letras y números
-        String patron = "^(?=.*[a-zA-Z])(?=.*\\d).+$";
-
-        return contrasena != null && !contrasena.isEmpty() && Pattern.matches(patron, contrasena);
+    public boolean validatePassword(String password) {
+        String regex = "^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(password);
+        return matcher.matches();
     }
 
     public boolean validarLetras(String texto) {
