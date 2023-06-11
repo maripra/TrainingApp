@@ -14,10 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
-//import com.example.trainingapp.Adapters.Entrenamiento_Adapter;
+
 import com.example.trainingapp.Adapters.EntrenamientoListviewAdapter;
-import com.example.trainingapp.Modelo.Ejercicio;
-import com.example.trainingapp.Modelo.Entrenamiento;
+
 import com.example.trainingapp.Modelo.LineaUsuario;
 import com.example.trainingapp.Modelo.enumeraciones.TipoEntrenamiento;
 import com.example.trainingapp.R;
@@ -94,7 +93,7 @@ public class EntrenamientoFragment extends Fragment {
 
         return _view;
     }
-    /*public void getAll() {
+    public void getAll() {
 
         FirebaseFirestore db;
         CollectionReference lineaUsuarioCollecion;
@@ -109,11 +108,16 @@ public class EntrenamientoFragment extends Fragment {
 
                             LineaUsuario linea_usuario = new LineaUsuario();
                             linea_usuario.setUsuarioId(document.getString("UserID"));
+                            linea_usuario.setNombreEntrenamiento(document.getString("Nombre Entrenamiento"));
+                            linea_usuario.setDuracionTotalAproxMin(document.getLong("DuraciónTotalMin").intValue());
+                            linea_usuario.setFechaInicio(document.getTimestamp("Fecha"));
+                            linea_usuario.setCompletado(document.getBoolean("Completado"));
+                            //linea_usuario.setTipoEntrenamiento(document.getString("Tipo Entrenamiento"));
                             lineaUsuarios.add(linea_usuario);
 
                     }
                 }
             }
         });
-    }*/
+    }
 }

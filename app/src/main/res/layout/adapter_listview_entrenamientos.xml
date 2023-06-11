@@ -12,51 +12,151 @@
         android:id="@+id/entrenamiento_item_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="5dp"
         android:text="@string/number_adapter_entrenamiento"
         android:textAppearance="?attr/textAppearanceListItem"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:gravity="left|center"
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:text="Nombre"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/entrenamiento_Titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginTop="15dp"
             android:text="Circuito"
             android:textAppearance="?attr/textAppearanceListItem"/>
-    <TextView
-        android:id="@+id/duracionTotal"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginLeft="10dp"
-        android:text="45"
-        android:textAppearance="?attr/textAppearanceListItem"/>
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:text="Tiempo(m)"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/lblDuracionTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:text="45"
+            android:textColor="@color/azul_3"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:text="Fecha"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:textStyle="bold"/>
     <TextView
         android:id="@+id/txtentreno_Fecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="1dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
         android:text="05/06/23"
         android:textAppearance="?attr/textAppearanceListItem" />
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:text="Hecho"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:textStyle="bold"/>
     <CheckBox
         android:id="@+id/incompletadoCheckbox"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="2dp">
+        android:layout_height="wrap_content">
 
     </CheckBox>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:text="Tipo"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:textStyle="bold"/>
     <TextView
         android:id="@+id/entrenamiento_TipoEntrenamiento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
         android:text="Obligatorio"
         android:textAppearance="?attr/textAppearanceListItem" />
-
+    </LinearLayout>
 </LinearLayout>
 
 

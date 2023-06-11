@@ -52,7 +52,7 @@ public class HistorialListviewAdapter extends BaseAdapter {
         itemlbl.setText(lineaUsuario.getId());
         TextView nombrelbl = view.findViewById(R.id.entrenamiento_Titulo);
         nombrelbl.setText(lineaUsuario.getNombreEntrenamiento());
-        TextView duracionTotal = view.findViewById(R.id.duracionTotal);
+        TextView duracionTotal = view.findViewById(R.id.lblDuracionTotal);
         duracionTotal.setText(Integer.toString(lineaUsuario.getDuracionTotalAproxMin()));
         TextView fechalbl = view.findViewById(R.id.txtentreno_Fecha);
         fechalbl.setText(lineaUsuario.getFechaInicio().toString());
@@ -69,6 +69,6 @@ public class HistorialListviewAdapter extends BaseAdapter {
 
 
 
-        return null;
+        return view;
     }
 }

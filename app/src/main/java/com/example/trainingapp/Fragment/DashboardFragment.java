@@ -57,7 +57,7 @@ public class DashboardFragment extends Fragment {
 
         List<Ejercicio> ejercicios = new ArrayList<>();
         ejercicios.add(new Ejercicio("1", "Peso muerto", 3, 0, 15, new ArrayList<String>(Arrays.asList("1","2"))));
-        ejercicios.add(new Ejercicio("2", "Abdominales", 3, 0, 15, new ArrayList<String>(Arrays.asList("1","2"))));
+        ejercicios.add(new Ejercicio("2", "Abdominales", 3, 30, 0, new ArrayList<String>(Arrays.asList("1","2"))));
         ejercicios.add(new Ejercicio("3", "Sentadilla", 3, 0, 15, new ArrayList<String>(Arrays.asList("1","2"))));
 
         _listView.setAdapter(new DashboardListviewAdapter(_context,ejercicios));

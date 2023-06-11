@@ -57,7 +57,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:orientation="vertical">
@@ -116,7 +115,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:ellipsize="end"
-                        android:text="Duración"
+                        android:text="Tiempo(s)"
                         android:textSize="15sp"
                         android:textColor="#000"
                         android:textStyle="bold"/>
@@ -151,7 +150,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
                         android:ellipsize="end"
-                        android:text="Repet."
+                        android:text="Rept."
                         android:textSize="15sp"
                         android:textColor="#000"
                         android:textStyle="bold"/>
