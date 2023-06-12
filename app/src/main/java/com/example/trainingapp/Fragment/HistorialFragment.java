@@ -61,14 +61,13 @@ public class HistorialFragment extends Fragment {
         _listView = (ListView) _view.findViewById(R.id.listViewHistorial);
 
         List<LineaUsuario> lineaUsuarios = new ArrayList<>();
-        lineaUsuarios.add(new LineaUsuario("1", "1","Cirucito", 45, new Timestamp( new GregorianCalendar(2023, Calendar.JUNE, 9).getTime()), true, TipoEntrenamiento.OBLIGATORIO));
-        lineaUsuarios.add(new LineaUsuario("2", "1","Tabata", 20, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
-        lineaUsuarios.add(new LineaUsuario("3", "1","GAP", 50, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
-        lineaUsuarios.add(new LineaUsuario("4", "1","CORE", 30, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
-        lineaUsuarios.add(new LineaUsuario("5", "1","Tonificación", 40, Timestamp.now(), false, TipoEntrenamiento.OBLIGATORIO));
-        lineaUsuarios.add(new LineaUsuario("6", "1","Carrera", 60, Timestamp.now(), false, TipoEntrenamiento.OBLIGATORIO));
-        lineaUsuarios.add(new LineaUsuario("7", "1","Full Body", 50, Timestamp.now(), false, TipoEntrenamiento.OBLIGATORIO));
-        lineaUsuarios.add(new LineaUsuario("8", "1","YOGA", 24, Timestamp.now(), false, TipoEntrenamiento.OBLIGATORIO));
+        lineaUsuarios.add(new LineaUsuario("1", "1","Cirucito", 45, new Timestamp( new GregorianCalendar(2023, Calendar.JUNE, 7).getTime()), true, TipoEntrenamiento.OBLIGATORIO));
+        lineaUsuarios.add(new LineaUsuario("2", "1","Tabata", 20, new Timestamp(new GregorianCalendar(2023, Calendar.JUNE, 8).getTime()), true, TipoEntrenamiento.OBLIGATORIO));
+        lineaUsuarios.add(new LineaUsuario("3", "1","GAP", 50, new Timestamp(new GregorianCalendar(2023, Calendar.JUNE, 9).getTime()), true, TipoEntrenamiento.OBLIGATORIO));
+        lineaUsuarios.add(new LineaUsuario("4", "1","CORE", 30,new Timestamp(new GregorianCalendar(2023, Calendar.JUNE, 12).getTime()), true, TipoEntrenamiento.OBLIGATORIO));
+        lineaUsuarios.add(new LineaUsuario("5", "1","Carrera", 60, new Timestamp(new GregorianCalendar(2023, Calendar.JUNE, 13).getTime()), false, TipoEntrenamiento.OBLIGATORIO));
+        lineaUsuarios.add(new LineaUsuario("6", "1","Full Body", 50, new Timestamp(new GregorianCalendar(2023, Calendar.JUNE, 14).getTime()), false, TipoEntrenamiento.OBLIGATORIO));
+        lineaUsuarios.add(new LineaUsuario("7", "1","YOGA", 24,  new Timestamp(new GregorianCalendar(2023, Calendar.JUNE, 15).getTime()), false, TipoEntrenamiento.OBLIGATORIO));
 
         List<LineaUsuario> lineaUsuariosCompletados = new ArrayList<>();
         for (LineaUsuario lineaUsuario : lineaUsuarios) {
