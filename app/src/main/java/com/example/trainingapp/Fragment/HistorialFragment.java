@@ -17,6 +17,8 @@ import com.example.trainingapp.R;
 import com.google.firebase.Timestamp;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 /**
@@ -59,7 +61,7 @@ public class HistorialFragment extends Fragment {
         _listView = (ListView) _view.findViewById(R.id.listViewHistorial);
 
         List<LineaUsuario> lineaUsuarios = new ArrayList<>();
-        lineaUsuarios.add(new LineaUsuario("1", "1","Cirucito", 45, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
+        lineaUsuarios.add(new LineaUsuario("1", "1","Cirucito", 45, new Timestamp( new GregorianCalendar(2023, Calendar.JUNE, 9).getTime()), true, TipoEntrenamiento.OBLIGATORIO));
         lineaUsuarios.add(new LineaUsuario("2", "1","Tabata", 20, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
         lineaUsuarios.add(new LineaUsuario("3", "1","GAP", 50, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
         lineaUsuarios.add(new LineaUsuario("4", "1","CORE", 30, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));

@@ -37,7 +37,8 @@ public class RegistroActivity extends AppCompatActivity {
     private EditText surname;
     private RadioGroup radioGroupGenero;
     private RadioButton radioButtonGenero;
-
+    private RadioButton radioButtonMujer;
+    private RadioButton radioButtonHombre;
     private EditText phone;
     private EditText email;
     private EditText password;
@@ -60,6 +61,8 @@ public class RegistroActivity extends AppCompatActivity {
         password =findViewById(R.id.txtContrasena);
         radioGroupGenero= findViewById(R.id.radioSexo);
         radioGroupGenero.clearCheck();
+        radioButtonMujer = findViewById(R.id.radioButton);
+        radioButtonHombre = findViewById(R.id.radioButton2);
         btn_Registro = findViewById(R.id.btnRegistro);
         btn_Registro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,15 +79,15 @@ public class RegistroActivity extends AppCompatActivity {
                 String hashedPassword = hashearContrasena(passwordUser);
                 String textGenero;
 
-                if(!validarLetras(nameUser)) {
+                if(validarLetras(nameUser)) {
                     Toast.makeText(RegistroActivity.this, "Introduce el nombre ", Toast.LENGTH_SHORT).show();
                     name.setError("El nombre no puede tener números ni estar vacio");
                     name.requestFocus();
                     return;
-                }else if(!validarLetras(surnameUser)){
+                }else if(validarLetras(surnameUser)){
                     Toast.makeText(RegistroActivity.this, "Introduce el apellido ", Toast.LENGTH_SHORT).show();
-                    name.setError("El apellido no puede tener números ni estar vacio");
-                    name.requestFocus();
+                    surname.setError("El apellido no puede tener números ni estar vacio");
+                    surname.requestFocus();
                     return;
                 } else if (phoneUser.isEmpty()) {
                     Toast.makeText(RegistroActivity.this, "Introduce el número de teléfono", Toast.LENGTH_SHORT).show();
@@ -113,8 +116,10 @@ public class RegistroActivity extends AppCompatActivity {
                     return;
                 }else if(radioGroupGenero.getCheckedRadioButtonId()== -1) {
                     Toast.makeText(RegistroActivity.this, "Por favor seleccione vuestro género", Toast.LENGTH_SHORT).show();
-                    radioButtonGenero.setError("el género es requerido");
-                    radioButtonGenero.requestFocus();
+                    radioButtonMujer.setError("el género es requerido");
+                    radioButtonMujer.requestFocus();
+                    radioButtonHombre.setError("el género es requerido");
+                    radioButtonHombre.requestFocus();
                     return;
                 }else if(!validatePassword(passwordUser)){
                     Toast.makeText(RegistroActivity.this, "Por favor introduce la contraseña", Toast.LENGTH_SHORT).show();
@@ -127,6 +132,7 @@ public class RegistroActivity extends AppCompatActivity {
                     password.requestFocus();
                     return;
                 }else{
+
                     textGenero=radioButtonGenero.getText().toString().trim();
                     registroUser(nameUser,surnameUser,phoneUser,emailUser,hashedPassword,textGenero);
                 }
