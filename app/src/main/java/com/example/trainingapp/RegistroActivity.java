@@ -76,7 +76,6 @@ public class RegistroActivity extends AppCompatActivity {
                 String phoneUser= phone.getText().toString().trim();
                 String emailUser= email.getText().toString().trim();
                 String passwordUser= password.getText().toString().trim();
-                String hashedPassword = hashearContrasena(passwordUser);
                 String textGenero;
 
                 if(validarLetras(nameUser)) {
@@ -134,7 +133,7 @@ public class RegistroActivity extends AppCompatActivity {
                 }else{
 
                     textGenero=radioButtonGenero.getText().toString().trim();
-                    registroUser(nameUser,surnameUser,phoneUser,emailUser,hashedPassword,textGenero);
+                    registroUser(nameUser,surnameUser,phoneUser,emailUser,passwordUser,textGenero);
                 }
 
             }
@@ -151,7 +150,7 @@ public class RegistroActivity extends AppCompatActivity {
                         String id= mAuth.getCurrentUser().getUid();
                         Map<String, Object> map= new HashMap<>();
                         map.put("id", id);
-                        map.put("Nombre ", nameUser);
+                        map.put("Nombre", nameUser);
                         map.put("Apellido",surnameUser);
                         map.put("Teléfono", phoneUser);
                         map.put("Género", textGenero);
@@ -196,36 +195,8 @@ public class RegistroActivity extends AppCompatActivity {
     public boolean validarLetras(String texto) {
         return texto.isEmpty() || !texto.matches("[a-zA-Z]+");
     }
-    public  String hashearContrasena(String contrasena) {
-        try {
-            // Crear instancia del algoritmo de hash SHA-256
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
 
-            // Obtener el arreglo de bytes de la contraseña en UTF-8
-            byte[] bytes = contrasena.getBytes(StandardCharsets.UTF_8);
 
-            // Aplicar el algoritmo de hash a los bytes de la contraseña
-            byte[] hashBytes = digest.digest(bytes);
-
-            // Convertir el arreglo de bytes del hash a una representación en hexadecimal
-            StringBuilder hexString = new StringBuilder();
-            for (byte hashByte : hashBytes) {
-                String hex = Integer.toHexString(0xff & hashByte);
-                if (hex.length() == 1) {
-                    hexString.append('0');
-                }
-                hexString.append(hex);
-            }
-
-            // Devolver el hash de la contraseña en formato hexadecimal
-            return hexString.toString();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-            // Manejo del error en caso de algoritmo de hash no encontrado
-        }
-
-        return null;
-    }
 
 
 }
